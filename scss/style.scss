@@ -9,7 +9,10 @@
 /*block*/
 /*container*/
 @import "block/container.scss"; 
-
+/*main*/
+@import "block/main.scss"; 
+/*header*/
+@import "block/header.scss"; 
 /*main style*/
 html{
   font-size: 16px;
