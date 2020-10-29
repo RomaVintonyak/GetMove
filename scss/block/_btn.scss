@@ -1,0 +1,30 @@
+/*variables*/
+@import "./var.scss";
+/*helpers class*/
+@import "./help.scss";
+/*mixins*/
+@import "./mixin.scss";
+
+.btn {
+  border: none;
+  background-color: $orange-l;
+  width: 340px;
+  height: 80px;
+  border-radius: 100px;
+  color: $black-l;
+  font-size: 1.25rem;
+  font-weight: 500;
+  transition: background-color 0.1s linear, color 0.1s linear, box-shadow 0.1s linear;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: $silver;
+    color: $black;
+    box-shadow: 0 0 5px $silver;
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
