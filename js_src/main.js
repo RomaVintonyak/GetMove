@@ -8,7 +8,8 @@ jQuery(document).ready(function(){
       menuBtn.not("active").removeClass("active__link");
       $(this).toggleClass("active__link");
     });
-
+  var screenSection = $("[data-section]");
+  
 
 
 });
