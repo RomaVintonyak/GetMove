@@ -27,4 +27,11 @@
       transform: scale(0.9);
     }
   }
+  &--silver{
+    background-color: $silver-l;
+    &:hover{
+      background-color: $orange-l;
+      box-shadow: 0 0 5px $orange-l;
+    }
+  }
 }

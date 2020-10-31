@@ -50,4 +50,35 @@
 }
 .about__collum{
   width: 30%;
+  overflow: hidden;
+  border-radius: 10px;
+  border-bottom: 2px solid $blue;
+  transition: background-color 0.2s linear, transform 0.2s linear;
+  img{
+    margin-bottom: 1.78rem;
+    transition: transform 0.8s linear;
+  }
+  h4{
+    font-family: $popins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.37rem;
+    line-height: 25px;
+    letter-spacing: -1px;
+    color: $black-l;
+    margin-bottom: 1.56rem;
+  }
+  p{
+    margin-bottom: 1rem;
+    font-family: $roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.12rem;
+    line-height: 20px;
+    color: $black-l;
+  }
+  &:hover{
+    background-color: $white;
+    transform: translateY(-5px);
+  }
 }
