@@ -34,4 +34,17 @@
       box-shadow: 0 0 5px $orange-l;
     }
   }
+  &--outline{
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid $white;
+    color: $white;
+    &:hover{
+      background-color: $white;
+    }
+  }
+}
+.btn__active{
+  background-color: $white;
+  color: $black;
 }

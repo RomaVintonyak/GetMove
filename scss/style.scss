@@ -21,6 +21,13 @@
 @import "block/about__us.scss"; 
 /*stage style*/
 @import "block/stage.scss"; 
+/*works style*/
+@import "block/works.scss"; 
+
+
+/*vendor style*/
+/*slick slider*/
+@import "vendor/slick.scss";
 /*main style*/
 html{
   font-size: 16px;

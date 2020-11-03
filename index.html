@@ -445,7 +445,61 @@
     <!--works-->
     <section id="works" class="works" data-section="works">
       <div class="container">
-
+        <div class="works__row">
+          <div class="works__title text__center">
+            <h3>Наши работы</h3>
+            <h2>Портфолио</h2>
+          </div><!--/.works__title-->
+          <div class="works__buttons text__center">
+            <button type="button" class="btn btn--outline" data-works="sites">Разработка сайтов</button>
+            <button type="button" class="btn btn--outline btn__active" data-works="brand">Брендинг</button>
+            <button type="button" class="btn btn--outline" data-works="mobile">Мобильные приложения</button>
+          </div><!--/.works__buttons-->
+          <div class="works__content">
+            <div class="sites__slider" id="sliderSites" data-cat="sites">
+                <div class="sites__slider--item">
+                  <img src="img/works/sites1.jpeg" alt="webSite" class="img">
+                </div>
+                <div class="sites__slider--item">
+                  <img src="img/works/sites2.jpeg" alt="webSite" class="img">
+                </div>
+                <div class="sites__slider--item">
+                  <img src="img/works/sites3.jpeg" alt="webSite" class="img">
+                </div>
+                <div class="sites__slider--item">
+                  <img src="img/works/sites4.jpeg" alt="webSite" class="img">
+                </div>
+            </div><!--/.sites__slider-->
+            <div class="brand__slider show__category" id="sliderBrand" data-cat="brand">
+              <div class="brand__slider--item">
+                <img src="img/works/brand1.jpg" alt="brand" class="img">
+              </div>
+              <div class="brand__slider--item">
+                <img src="img/works/brand2.jpg" alt="brand" class="img">
+              </div>
+              <div class="brand__slider--item">
+                <img src="img/works/brand3.jpg" alt="brand" class="img">
+              </div>
+              <div class="brand__slider--item">
+                <img src="img/works/brand4.jpg" alt="brand" class="img">
+              </div>
+          </div><!--/.brand__slider-->
+          <div class="mobile__slider" id="sliderMobile" data-cat="mobile">
+            <div class="mobile__slider--item">
+              <img src="img/works/mobile1.jpeg" alt="mobile" class="img">
+            </div>
+            <div class="mobile__slider--item">
+              <img src="img/works/mobile2.jpeg" alt="mobile" class="img">
+            </div>
+            <div class="mobile__slider--item">
+              <img src="img/works/mobile3.jpeg" alt="mobile" class="img">
+            </div>
+            <div class="mobile__slider--item">
+              <img src="img/works/mobile4.jpeg" alt="mobile" class="img">
+            </div>
+          </div><!--/.mobile__slider-->
+          </div><!--/.works__content-->
+        </div><!--/.works__row-->
       </div><!--/.container-->
     </section><!--/.works-->
   </main><!--/.main__page-->
@@ -456,6 +510,8 @@
   <script src="/js/vendor/particles.min.js"></script>
   <!--particle js setings-->
   <script src="js/app.min.js"></script>
+  <!--use slick slider script https://kenwheeler.github.io/slick/ -->
+  <script src="js/vendor/slick.min.js"></script>
   <!--main script conected-->
   <script src="js/main.min.js"></script>
 </body>
