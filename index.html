@@ -587,7 +587,22 @@
             </ul><!--/.social__menu-->
           </div><!--/.contact__data-->
           <div class="contact__form text__left">
-            
+            <div class="form__title">
+              <h3>Свяжитесь с нами</h3>
+              <h2>Обратная связь</h2>
+            </div><!--/.form__title-->
+            <form id="form" action="#" class="form">
+              <label for="name">Ваше имя</label>
+              <input type="text" id="name" placeholder="Введите ваше имя" autocomplete="off">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" placeholder="Введите ваш Email" autocomplete="off">
+              <label for="phone">Телефон</label>
+              <input type="tel" id="phone" placeholder="Оставьте ваш номер телефона" autocomplete="off">
+              <label for="mesages">Сообщение</label>
+              <textarea name="mesages" id="mesages" placeholder="Ваше сообщене"></textarea>
+              <button type="button" class="btn btn--send" id="sendForm">Отправить</button>
+              <div class="error__text" id="errorText"></div>
+            </form>
           </div><!--/.contact__form-->
         </div><!--/.contact__row-->
         <footer id="footer" class="footer">

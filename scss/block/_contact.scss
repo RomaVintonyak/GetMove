@@ -64,5 +64,99 @@
   }
 }
 .contact__form{
-  width: 50%;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.form__title{
+  margin-bottom: 2.5rem;
+  h3{
+    font-family: $popins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.87rem;
+    line-height: 21px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $white;
+  }
+  h2{
+    font-family: $popins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.18rem;
+    line-height: 50px;
+    color: $white;
+  }
+}
+.form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  label{
+    font-family: $popins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.87rem;
+    line-height: 21px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+    color: rgba($color: $white, $alpha: 0.7);
+  }
+  input{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 0.6rem;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid $white;
+    font-family: $roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.12rem;
+    line-height: 22px;
+    color: $white;
+    mix-blend-mode: normal;
+    &:focus{
+      border: none;
+      border-color: transparent;
+      outline: none;
+      border-bottom: 2px solid $white;
+    }
+  }
+  textarea{
+    width: 100%;
+    height: 100px;
+    resize: none;
+    margin-bottom: 1.87rem;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid $white;
+    font-family: $roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.12rem;
+    line-height: 22px;
+    color: $white;
+    mix-blend-mode: normal;
+    &:focus{
+      border: none;
+      border-color: transparent;
+      outline: none;
+      border-bottom: 2px solid $white;
+    }
+  }
+}
+.error__text{
+  width: 100%;
+  height: 20px;
+  color: $red;
+  font-family: $roboto;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 1rem;
 }
