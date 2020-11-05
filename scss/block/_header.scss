@@ -15,6 +15,7 @@
   background-color: rgba($orange, $alpha: 0.7);
   display: flex;
   align-items: center;
+  transition: background-color 0.4s linear;
 }
 .nav__menu{
   display: flex;

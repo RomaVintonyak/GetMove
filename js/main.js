@@ -9,6 +9,41 @@ jQuery(document).ready(function () {
   });
   menuBtn.on("click", function () {
     var link = $(this).data("link");
+    /*=======change bg header=========*/
+    switch(link){
+      case "home":
+        $("#header").css(
+          'background-color','rgba(250, 190, 76, '+ 0.7 +')'
+        );
+        break;
+      case "about":
+        $("#header").css(
+          'background-color','rgba(245, 233, 219, '+ 0.7 +')'
+        );
+        break;
+      case "stage":
+        $("#header").css(
+          'background-color','rgba(74, 163, 199, '+ 0.7 +')'
+        );
+        break;
+      case "works":
+        $("#header").css(
+          'background-color','rgba(238, 92, 79, '+ 0.7 +')'
+        );
+        break;
+      case "faq":
+        $("#header").css(
+          'background-color','rgba(36, 51, 81, '+ 0.7 +')'
+        );
+        break;
+      case "contact":
+        $("#header").css(
+          'background-color','rgba(27, 27, 27, '+ 0.7 +')'
+        );
+        break;
+      default:
+        'background-color','rgba(250, 190, 76, '+ 0.7 +')'
+    }
     $("[data-section]").each(function () {
       var section = $(this).data("section");
       if (section == link) {
