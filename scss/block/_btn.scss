@@ -6,33 +6,59 @@
 @import "./mixin.scss";
 
 .btn {
+  display: inline-block;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
   border: none;
   background-color: $orange-l;
   width: 340px;
   height: 80px;
-  border-radius: 100px;
   color: $black-l;
   font-family: $roboto;
   font-size: 1.25rem;
   font-weight: 500;
-  transition: background-color 0.1s linear, color 0.1s linear, box-shadow 0.1s linear;
+  transition: background-color 0.2s linear, border 0.2s linear, color 0.2s linear;
+  &::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($orange, 0.6);
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform 0.5s ease-out;
+  }
   &:focus {
     outline: none;
   }
   &:hover {
     cursor: pointer;
-    background-color: $silver;
-    color: $black;
-    box-shadow: 0 0 5px $silver;
+    color: $white;
+    border: 1px solid $white;
+    background-color: rgba($color: $orange-l, $alpha: 0.2);
+    &::before{
+      transform: scaleX(1);
+      transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
     &:active {
-      transform: scale(0.9);
+      transform: scale(0.96);
+      box-shadow: 0 0 8px $silver;
     }
   }
   &--silver{
-    background-color: $silver-l;
+    background-color: $white;
+    &::before{
+      background: rgba($blue, 0.6);
+    }
     &:hover{
-      background-color: $orange-l;
-      box-shadow: 0 0 5px $orange-l;
+      background-color: rgba(#00B4DB, 0.2);
+      &::before{
+        background: rgba($blue, 0.6);
+      }
     }
   }
   &--outline{
