@@ -18,7 +18,7 @@ jQuery(document).ready(function () {
         break;
       case "about":
         $("#header").css(
-          'background-color','rgba(245, 233, 219, '+ 0.7 +')'
+          'background-color','rgba(255, 239, 186, '+ 0.7 +')'
         );
         break;
       case "stage":
