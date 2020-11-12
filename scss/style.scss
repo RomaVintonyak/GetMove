@@ -9,6 +9,8 @@
 /*block*/
 /*container*/
 @import "block/container.scss"; 
+/*absolute section*/
+@import "block/absolute.scss"; 
 /*main*/
 @import "block/main.scss"; 
 /*header*/
@@ -27,6 +29,8 @@
 @import "block/faq.scss"; 
 /*contact style*/
 @import "block/contact.scss"; 
+/*burger style*/
+@import "block/burger.scss"; 
 
 /*vendor style*/
 /*slick slider*/

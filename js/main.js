@@ -1,5 +1,11 @@
 jQuery(document).ready(function () {
   "use script";
+  /*burger button script */
+  var burgerBtn = $("#burgerBtn");
+  burgerBtn.on("click", function(event){
+      event.preventDefault();
+      $(".burger__item").toggleClass("burger__item--active");
+  });
   /*use active class to header nav link*/
   var menuBtn = $("[data-link]");
   menuBtn.on("click", function (event) {
@@ -10,7 +16,7 @@ jQuery(document).ready(function () {
   menuBtn.on("click", function () {
     var link = $(this).data("link");
     /*=======change bg header=========*/
-    switch(link){
+    /*switch(link){
       case "home":
         $("#header").css(
           'background-color','rgba(250, 190, 76, '+ 0.7 +')'
@@ -18,7 +24,7 @@ jQuery(document).ready(function () {
         break;
       case "about":
         $("#header").css(
-          'background-color','rgba(0, 180, 219, '+ 0.7 +')'
+          'background-color','rgba(0, 0, 0, '+ 0.9 +')'
         );
         break;
       case "stage":
@@ -43,7 +49,7 @@ jQuery(document).ready(function () {
         break;
       default:
         'background-color','rgba(250, 190, 76, '+ 0.7 +')'
-    }
+    }*/
     $("[data-section]").each(function () {
       var section = $(this).data("section");
       if (section == link) {
@@ -55,10 +61,23 @@ jQuery(document).ready(function () {
   });
   /*about us page hover script*/
   var leftCollum = $(".about__collum--left");
-  leftCollum.hover(add__class());
-  function add__class(){
-    alert("its work");
-  }
+  var centerCollum = $(".about__collum--center");
+  var rightCollum = $(".about__collum--right");
+  leftCollum.hover(function(){
+    leftCollum.css({
+      "background-color":"#FFEFBA"
+    });
+    centerCollum.css({
+      "opacity":"0.2",
+    });
+    rightCollum.css({
+      "opacity":"0.2",
+    });
+    $(".about__title>h3, .about__title>h2").css({
+      "color":"#EE5C4F"
+    });
+    $(".btn--silver").addClass("btn--silver--active");
+  });
   /*works page slick slider seting*/
   $("#sliderSites").slick({
     slidesToShow: 3,
