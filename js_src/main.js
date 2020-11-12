@@ -18,7 +18,7 @@ jQuery(document).ready(function () {
         break;
       case "about":
         $("#header").css(
-          'background-color','rgba(255, 239, 186, '+ 0.7 +')'
+          'background-color','rgba(0, 180, 219, '+ 0.7 +')'
         );
         break;
       case "stage":
@@ -53,6 +53,12 @@ jQuery(document).ready(function () {
       }
     });
   });
+  /*about us page hover script*/
+  var leftCollum = $(".about__collum--left");
+  leftCollum.hover(add__class());
+  function add__class(){
+    alert("its work");
+  }
   /*works page slick slider seting*/
   $("#sliderSites").slick({
     slidesToShow: 3,
