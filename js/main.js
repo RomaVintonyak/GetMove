@@ -72,24 +72,28 @@ jQuery(document).ready(function () {
     });
   });
   /*about us page hover script*/
-  /*var leftCollum = $(".about__collum--left");
+  var leftCollum = $(".about__collum--left");
   var centerCollum = $(".about__collum--center");
   var rightCollum = $(".about__collum--right");
+  var aboutRow = $(".about__row");
   leftCollum.hover(function(){
-    leftCollum.css({
-      "background-color":"#FFEFBA"
+    aboutRow.css({
+      "background-color":"#FFE173"
     });
-    centerCollum.css({
-      "opacity":"0.2",
+    $(this).addClass("bounce");
+  });
+  centerCollum.hover(function(){
+    aboutRow.css({
+      "background-color":"#EE5C4F"
     });
-    rightCollum.css({
-      "opacity":"0.2",
+    $(this).addClass("pulse");
+  });
+  rightCollum.hover(function(){
+    aboutRow.css({
+      "background-color":"#4AA3C7"
     });
-    $(".about__title>h3, .about__title>h2").css({
-      "color":"#EE5C4F"
-    });
-    $(".btn--silver").addClass("btn--silver--active");
-  });*/
+    $(this).addClass("heartBeat");
+  });
   /*works page slick slider seting*/
   $("#sliderSites").slick({
     slidesToShow: 3,

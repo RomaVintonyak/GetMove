@@ -52,12 +52,12 @@
   &--silver{
     background-color: $white;
     &::before{
-      background: rgba($blue, 0.6);
+      background: rgba($red, 0.6);
     }
     &:hover{
-      background-color: rgba(#00B4DB, 0.2);
+      background-color: rgba($orange-l, 0.2);
       &::before{
-        background: rgba($blue, 0.6);
+        background: rgba($red, 0.6);
       }
     }
   }
