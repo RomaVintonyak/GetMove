@@ -7,6 +7,8 @@
 /*vendor*/
 
 /*block*/
+/*preloader*/
+@import "block/preloader.scss"; 
 /*container*/
 @import "block/container.scss"; 
 /*absolute section*/
@@ -35,6 +37,8 @@
 /*vendor style*/
 /*slick slider*/
 @import "vendor/slick.scss";
+/*animation style*/
+@import "vendor/animate.scss";
 /*main style*/
 html{
   font-size: 16px;

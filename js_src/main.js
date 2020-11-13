@@ -1,3 +1,9 @@
+/*preloader script*/
+$(window).on("load", function(){
+  setTimeout(function(){
+    $(".preloader").addClass("preloader--done");
+  }, 1000);
+});
 jQuery(document).ready(function () {
   "use script";
   /*burger button script */
@@ -66,7 +72,7 @@ jQuery(document).ready(function () {
     });
   });
   /*about us page hover script*/
-  var leftCollum = $(".about__collum--left");
+  /*var leftCollum = $(".about__collum--left");
   var centerCollum = $(".about__collum--center");
   var rightCollum = $(".about__collum--right");
   leftCollum.hover(function(){
@@ -83,7 +89,7 @@ jQuery(document).ready(function () {
       "color":"#EE5C4F"
     });
     $(".btn--silver").addClass("btn--silver--active");
-  });
+  });*/
   /*works page slick slider seting*/
   $("#sliderSites").slick({
     slidesToShow: 3,
@@ -205,5 +211,6 @@ jQuery(document).ready(function () {
       }
     });
   });
-  
+  /*wow js initialized*/
+  new WOW().init();
 });
