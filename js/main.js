@@ -2,54 +2,60 @@ jQuery(document).ready(function () {
   "use script";
   /*burger button script */
   var burgerBtn = $("#burgerBtn");
+  var headerBg = $(".primary__header");
   burgerBtn.on("click", function(event){
       event.preventDefault();
       $(".burger__item").toggleClass("burger__item--active");
+      headerBg.toggleClass("primary__header--open");
   });
   /*use active class to header nav link*/
   var menuBtn = $("[data-link]");
   menuBtn.on("click", function (event) {
     event.preventDefault();
+    /*========header menu open/closed========*/
+    headerBg.toggleClass("primary__header--open");
+    $(".burger__item").toggleClass("burger__item--active");
+    /*=======================================*/
     menuBtn.not("active").removeClass("active__link");
     $(this).toggleClass("active__link");
   });
   menuBtn.on("click", function () {
     var link = $(this).data("link");
     /*=======change bg header=========*/
-    /*switch(link){
+    switch(link){
       case "home":
         $("#header").css(
-          'background-color','rgba(250, 190, 76, '+ 0.7 +')'
+          'background-color','rgba(250, 190, 76, '+ 1 +')'
         );
         break;
       case "about":
         $("#header").css(
-          'background-color','rgba(0, 0, 0, '+ 0.9 +')'
+          'background-color','rgba(245, 233, 218, '+ 1 +')'
         );
         break;
       case "stage":
         $("#header").css(
-          'background-color','rgba(74, 163, 199, '+ 0.7 +')'
+          'background-color','rgba(74, 163, 199, '+ 1 +')'
         );
         break;
       case "works":
         $("#header").css(
-          'background-color','rgba(238, 92, 79, '+ 0.7 +')'
+          'background-color','rgba(238, 92, 79, '+ 1 +')'
         );
         break;
       case "faq":
         $("#header").css(
-          'background-color','rgba(36, 51, 81, '+ 0.7 +')'
+          'background-color','rgba(36, 51, 81, '+ 1 +')'
         );
         break;
       case "contact":
         $("#header").css(
-          'background-color','rgba(27, 27, 27, '+ 0.7 +')'
+          'background-color','rgba(27, 27, 27, '+ 1 +')'
         );
         break;
       default:
-        'background-color','rgba(250, 190, 76, '+ 0.7 +')'
-    }*/
+        'background-color','rgba(250, 190, 76, '+ 1 +')'
+    }
     $("[data-section]").each(function () {
       var section = $(this).data("section");
       if (section == link) {

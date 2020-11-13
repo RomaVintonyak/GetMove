@@ -29,7 +29,7 @@
 .home__row{
   position: relative;
   z-index: 2;
-  top: 14%;
+  top: calc(50% - 33vh);
   display: flex;
   justify-content: space-between;
 }
