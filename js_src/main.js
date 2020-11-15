@@ -1,9 +1,27 @@
+/*preloader script*/
+$(window).on("load", function(){
+  setTimeout(function(){
+    $(".preloader").addClass("preloader--done");
+  }, 1000);
+});
 jQuery(document).ready(function () {
   "use script";
+  /*burger button script */
+  var burgerBtn = $("#burgerBtn");
+  var headerBg = $(".primary__header");
+  burgerBtn.on("click", function(event){
+      event.preventDefault();
+      $(".burger__item").toggleClass("burger__item--active");
+      headerBg.toggleClass("primary__header--open");
+  });
   /*use active class to header nav link*/
   var menuBtn = $("[data-link]");
   menuBtn.on("click", function (event) {
     event.preventDefault();
+    /*========header menu open/closed========*/
+    headerBg.toggleClass("primary__header--open");
+    $(".burger__item").toggleClass("burger__item--active");
+    /*=======================================*/
     menuBtn.not("active").removeClass("active__link");
     $(this).toggleClass("active__link");
   });
@@ -13,36 +31,36 @@ jQuery(document).ready(function () {
     switch(link){
       case "home":
         $("#header").css(
-          'background-color','rgba(250, 190, 76, '+ 0.7 +')'
+          'background-color','rgba(250, 190, 76, '+ 1 +')'
         );
         break;
       case "about":
         $("#header").css(
-          'background-color','rgba(255, 239, 186, '+ 0.7 +')'
+          'background-color','rgba(245, 233, 218, '+ 1 +')'
         );
         break;
       case "stage":
         $("#header").css(
-          'background-color','rgba(74, 163, 199, '+ 0.7 +')'
+          'background-color','rgba(74, 163, 199, '+ 1 +')'
         );
         break;
       case "works":
         $("#header").css(
-          'background-color','rgba(238, 92, 79, '+ 0.7 +')'
+          'background-color','rgba(238, 92, 79, '+ 1 +')'
         );
         break;
       case "faq":
         $("#header").css(
-          'background-color','rgba(36, 51, 81, '+ 0.7 +')'
+          'background-color','rgba(36, 51, 81, '+ 1 +')'
         );
         break;
       case "contact":
         $("#header").css(
-          'background-color','rgba(27, 27, 27, '+ 0.7 +')'
+          'background-color','rgba(27, 27, 27, '+ 1 +')'
         );
         break;
       default:
-        'background-color','rgba(250, 190, 76, '+ 0.7 +')'
+        'background-color','rgba(250, 190, 76, '+ 1 +')'
     }
     $("[data-section]").each(function () {
       var section = $(this).data("section");
@@ -52,6 +70,29 @@ jQuery(document).ready(function () {
         $(this).removeClass("show__screen");
       }
     });
+  });
+  /*about us page hover script*/
+  var leftCollum = $(".about__collum--left");
+  var centerCollum = $(".about__collum--center");
+  var rightCollum = $(".about__collum--right");
+  var aboutRow = $(".about__row");
+  leftCollum.hover(function(){
+    aboutRow.css({
+      "background-color":"#FFE173"
+    });
+    $(this).addClass("bounce");
+  });
+  centerCollum.hover(function(){
+    aboutRow.css({
+      "background-color":"#EE5C4F"
+    });
+    $(this).addClass("pulse");
+  });
+  rightCollum.hover(function(){
+    aboutRow.css({
+      "background-color":"#4AA3C7"
+    });
+    $(this).addClass("heartBeat");
   });
   /*works page slick slider seting*/
   $("#sliderSites").slick({
@@ -174,5 +215,6 @@ jQuery(document).ready(function () {
       }
     });
   });
-  
+  /*wow js initialized*/
+  new WOW().init();
 });
