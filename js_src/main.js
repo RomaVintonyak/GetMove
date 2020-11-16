@@ -51,7 +51,7 @@ jQuery(document).ready(function () {
         break;
       case "faq":
         $("#header").css(
-          'background-color','rgba(36, 51, 81, '+ 1 +')'
+          'background-color','rgba(78, 94, 195, '+ 1 +')'
         );
         break;
       case "contact":
@@ -82,17 +82,26 @@ jQuery(document).ready(function () {
     });
     $(this).addClass("bounce");
   });
+  leftCollum.mouseleave(function(){
+    $(this).removeClass("bounce");
+  });
   centerCollum.hover(function(){
     aboutRow.css({
       "background-color":"#EE5C4F"
     });
     $(this).addClass("pulse");
   });
+  centerCollum.mouseleave(function(){
+    $(this).removeClass("pulse");
+  });
   rightCollum.hover(function(){
     aboutRow.css({
       "background-color":"#4AA3C7"
     });
     $(this).addClass("heartBeat");
+  });
+  rightCollum.mouseleave(function(){
+    $(this).removeClass("heartBeat");
   });
   /*works page slick slider seting*/
   $("#sliderSites").slick({
