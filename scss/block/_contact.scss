@@ -12,21 +12,20 @@
   z-index: 2;
   width: 100%;
   height: 100vh;
-  background-color: $black-l;
+  background-color: $silver-l;
   overflow: hidden;
   transition: top 0.5s linear;
 }
 .contact__row{
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   width: 100%;
   height: 100vh;
-  padding-top: 4.6rem;
 }
 .contact__data{
   width: 30%;
-  height: 100%;
+  height: 60%;
   display: flex;
   flex-direction: column;
   h3{
@@ -37,7 +36,7 @@
     line-height: 21px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: $white;
+    color: $black;
     margin-bottom: 1.25rem;
   }
   a{
@@ -47,10 +46,10 @@
     font-weight: 300;
     font-size: 1.12rem;
     line-height: 36px;
-    color: $white;
+    color: $black;
     transition: color 0.1s linear;
     &:hover{
-      color: $silver;
+      color: $black-l;
     }
   }
   span{
@@ -59,13 +58,13 @@
     font-weight: 300;
     font-size: 0.85rem;
     line-height: 36px;
-    color: $white;
+    color: $black;
     margin-bottom: 5rem;
   }
 }
 .contact__form{
   width: 40%;
-  height: 100%;
+  height: 60%;
   display: flex;
   flex-direction: column;
 }
@@ -79,7 +78,7 @@
     line-height: 21px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: $white;
+    color: $black;
   }
   h2{
     font-family: $popins;
@@ -87,7 +86,7 @@
     font-weight: 600;
     font-size: 2.18rem;
     line-height: 50px;
-    color: $white;
+    color: $black;
   }
 }
 .form{
@@ -105,7 +104,7 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 0.3rem;
-    color: rgba($color: $white, $alpha: 0.7);
+    color: rgba($color: $black-l, $alpha: 0.7);
   }
   input{
     width: 100%;
@@ -113,19 +112,19 @@
     margin-bottom: 0.6rem;
     border: none;
     background-color: transparent;
-    border-bottom: 1px solid $white;
+    border-bottom: 1px solid $black;
     font-family: $roboto;
     font-style: normal;
     font-weight: 300;
     font-size: 1.12rem;
     line-height: 22px;
-    color: $white;
+    color: $black-l;
     mix-blend-mode: normal;
     &:focus{
       border: none;
       border-color: transparent;
       outline: none;
-      border-bottom: 2px solid $white;
+      border-bottom: 2px solid $black;
     }
   }
   textarea{
@@ -135,19 +134,19 @@
     margin-bottom: 1.87rem;
     border: none;
     background-color: transparent;
-    border-bottom: 1px solid $white;
+    border-bottom: 1px solid $black;
     font-family: $roboto;
     font-style: normal;
     font-weight: 300;
     font-size: 1.12rem;
     line-height: 22px;
-    color: $white;
+    color: $black-l;
     mix-blend-mode: normal;
     &:focus{
       border: none;
       border-color: transparent;
       outline: none;
-      border-bottom: 2px solid $white;
+      border-bottom: 2px solid $black;
     }
   }
 }

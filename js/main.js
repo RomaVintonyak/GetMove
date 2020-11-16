@@ -56,7 +56,7 @@ jQuery(document).ready(function () {
         break;
       case "contact":
         $("#header").css(
-          'background-color','rgba(27, 27, 27, '+ 1 +')'
+          'background-color','rgba(255, 247, 238, '+ 1 +')'
         );
         break;
       default:
