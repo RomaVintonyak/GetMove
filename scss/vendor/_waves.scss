@@ -53,14 +53,12 @@
   outline: none;
   color: inherit;
   background-color: rgba(0, 0, 0, 0);
-  font-size: 1em;
-  line-height: 1em;
   text-align: center;
   text-decoration: none;
   z-index: 1;
 }
 .waves-button {
-  padding: 0.85em 1.1em;
+  padding: 0.5em 1em;
   border-radius: 0.2em;
 }
 .waves-button-input {
@@ -90,3 +88,4 @@
 .waves-block {
   display: block;
 }
+

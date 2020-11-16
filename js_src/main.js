@@ -217,4 +217,7 @@ jQuery(document).ready(function () {
   });
   /*wow js initialized*/
   new WOW().init();
+  /*waves efect initialized*/
+  Waves.attach(".waves-effect");
+  Waves.init(); 
 });
