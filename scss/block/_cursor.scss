@@ -1,0 +1,15 @@
+/*variables*/
+@import "./var.scss";
+/*helpers class*/
+@import "./help.scss";
+/*mixins*/
+@import "./mixin.scss";
+
+.cursor__aura{
+  width: 100px;
+  height: 100px;
+  background-color: rgba($color: $black, $alpha: 0.4);
+  border: 1px solid rgba($color: $black, $alpha: 0.4);
+  position: absolute;
+  z-index: 15000;
+}

@@ -103,111 +103,9 @@ jQuery(document).ready(function () {
   rightCollum.mouseleave(function(){
     $(this).removeClass("heartBeat");
   });
-  /*works page slick slider seting*/
-  $("#sliderSites").slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: true,
-    cssEase: "ease-in-out",
-    speed: 500,
-    swipe: true,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 1000,
-    /*responsive*/
-    responsive: [
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-          fade: true,
-        },
-      },
-    ],
-  });
-  $("#sliderBrand").slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: true,
-    cssEase: "ease-in-out",
-    speed: 500,
-    swipe: true,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 1500,
-    /*responsive*/
-    responsive: [
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-          fade: true,
-        },
-      },
-    ],
-  });
-  $("#sliderMobile").slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: true,
-    cssEase: "ease-in-out",
-    speed: 500,
-    swipe: true,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 1200,
-    /*responsive*/
-    responsive: [
-      {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-          fade: true,
-        },
-      },
-    ],
-  });
+  
   /*work page change category project*/
-  var worksBtn = $("[data-works]");
+  /*var worksBtn = $("[data-works]");
   worksBtn.on("click", function (event) {
     event.preventDefault();
     worksBtn.not("active").removeClass("btn__active");
@@ -223,7 +121,8 @@ jQuery(document).ready(function () {
         $(this).removeClass("show__category");
       }
     });
-  });
+  });*/
+
   /*wow js initialized*/
   new WOW().init();
   /*waves efect initialized*/

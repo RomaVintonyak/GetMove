@@ -8,6 +8,8 @@
 @import "./mixin.scss";
 
 /*block*/
+/*cursor*/
+@import "block/cursor.scss"; 
 /*preloader*/
 @import "block/preloader.scss"; 
 /*container*/
@@ -38,8 +40,9 @@
 @import "block/footer.scss"; 
 
 /*vendor style*/
-/*slick slider*/
-@import "vendor/slick.scss";
+
+/*lightbox galery*/
+@import "vendor/lightbox.scss";
 /*animation style*/
 @import "vendor/animate.scss";
 /*waves style*/
