@@ -1,18 +1,49 @@
 /*preloader script*/
-$(window).on("load", function(){
-  setTimeout(function(){
+$(window).on("load", function () {
+  setTimeout(function () {
     $(".preloader").addClass("preloader--done");
   }, 1000);
 });
 jQuery(document).ready(function () {
   "use script";
+  /*cursor custom*/
+  var cursor = $("#cursorPoint");
+  var cursorAura = $("#cursorAura");
+  var allLinks = $("a, button");
+  $(window).mouseleave(function () {
+    cursorAura.addClass("cursor__aura--hiden");
+    $("body").css(
+      "overflow", "hidden"
+    );
+  });
+  $(window).mousemove(function (event) {
+    cursorAura.removeClass("cursor__aura--hiden");
+    $("body").removeAttr("style");
+    var posX = event.pageX;
+    var posY = event.pageY;
+    console.log("X: " + posX + " Y: " + posY);
+    cursorAura.css({
+      left: posX - 23,
+      top: posY - 23,
+    });
+  });
+  allLinks.each(function () {
+    $(this).mousemove(function () {
+      cursorAura.addClass("cursor__aura--active");
+      cursor.addClass("cursor__point--active");
+    });
+    $(this).mouseleave(function () {
+      cursorAura.removeClass("cursor__aura--active");
+      cursor.removeClass("cursor__point--active");
+    });
+  });
   /*burger button script */
   var burgerBtn = $("#burgerBtn");
   var headerBg = $(".primary__header");
-  burgerBtn.on("click", function(event){
-      event.preventDefault();
-      $(".burger__item").toggleClass("burger__item--active");
-      headerBg.toggleClass("primary__header--open");
+  burgerBtn.on("click", function (event) {
+    event.preventDefault();
+    $(".burger__item").toggleClass("burger__item--active");
+    headerBg.toggleClass("primary__header--open");
   });
   /*use active class to header nav link*/
   var menuBtn = $("[data-link]");
@@ -28,39 +59,39 @@ jQuery(document).ready(function () {
   menuBtn.on("click", function () {
     var link = $(this).data("link");
     /*=======change bg header=========*/
-    switch(link){
+    switch (link) {
       case "home":
         $("#header").css(
-          'background-color','rgba(250, 190, 76, '+ 1 +')'
+          'background-color', 'rgba(250, 190, 76, ' + 1 + ')'
         );
         break;
       case "about":
         $("#header").css(
-          'background-color','rgba(245, 233, 218, '+ 1 +')'
+          'background-color', 'rgba(245, 233, 218, ' + 1 + ')'
         );
         break;
       case "stage":
         $("#header").css(
-          'background-color','rgba(74, 163, 199, '+ 1 +')'
+          'background-color', 'rgba(74, 163, 199, ' + 1 + ')'
         );
         break;
       case "works":
         $("#header").css(
-          'background-color','rgba(238, 92, 79, '+ 1 +')'
+          'background-color', 'rgba(238, 92, 79, ' + 1 + ')'
         );
         break;
       case "faq":
         $("#header").css(
-          'background-color','rgba(78, 94, 195, '+ 1 +')'
+          'background-color', 'rgba(78, 94, 195, ' + 1 + ')'
         );
         break;
       case "contact":
         $("#header").css(
-          'background-color','rgba(255, 247, 238, '+ 1 +')'
+          'background-color', 'rgba(255, 247, 238, ' + 1 + ')'
         );
         break;
       default:
-        'background-color','rgba(250, 190, 76, '+ 1 +')'
+        'background-color', 'rgba(250, 190, 76, ' + 1 + ')'
     }
     $("[data-section]").each(function () {
       var section = $(this).data("section");
@@ -76,34 +107,34 @@ jQuery(document).ready(function () {
   var centerCollum = $(".about__collum--center");
   var rightCollum = $(".about__collum--right");
   var aboutRow = $(".about__row");
-  leftCollum.hover(function(){
+  leftCollum.hover(function () {
     aboutRow.css({
-      "background-color":"#FFE173"
+      "background-color": "#FFE173"
     });
     $(this).addClass("bounce");
   });
-  leftCollum.mouseleave(function(){
+  leftCollum.mouseleave(function () {
     $(this).removeClass("bounce");
   });
-  centerCollum.hover(function(){
+  centerCollum.hover(function () {
     aboutRow.css({
-      "background-color":"#EE5C4F"
+      "background-color": "#EE5C4F"
     });
     $(this).addClass("pulse");
   });
-  centerCollum.mouseleave(function(){
+  centerCollum.mouseleave(function () {
     $(this).removeClass("pulse");
   });
-  rightCollum.hover(function(){
+  rightCollum.hover(function () {
     aboutRow.css({
-      "background-color":"#4AA3C7"
+      "background-color": "#4AA3C7"
     });
     $(this).addClass("heartBeat");
   });
-  rightCollum.mouseleave(function(){
+  rightCollum.mouseleave(function () {
     $(this).removeClass("heartBeat");
   });
-  
+
   /*work page change category project*/
   /*var worksBtn = $("[data-works]");
   worksBtn.on("click", function (event) {
@@ -127,5 +158,5 @@ jQuery(document).ready(function () {
   new WOW().init();
   /*waves efect initialized*/
   Waves.attach(".waves-effect");
-  Waves.init(); 
+  Waves.init();
 });

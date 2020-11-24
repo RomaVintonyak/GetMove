@@ -48,6 +48,9 @@
 /*waves style*/
 @import "vendor/waves.scss";
 /*main style*/
+*{
+  cursor: none!important;
+}
 html{
   font-size: 16px;
 }
