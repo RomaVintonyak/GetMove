@@ -46,7 +46,7 @@
     }
     &:active {
       transform: scale(0.96);
-      box-shadow: 0 0 8px $silver;
+      box-shadow: 0 0 4px $silver;
     }
   }
   &--silver{
@@ -66,16 +66,33 @@
     background-color: transparent;
     border: 2px solid $white;
     color: $white;
+    &::before{
+      background: rgba($silver-l, 0.6);
+    }
     &:hover{
+      &::before{
+        background: rgba($silver-l, 0.6);
+      }
       background-color: $white;
+      color: $black-l;
     }
   }
   &--send{
     width: 150px;
     height: 50px;
     background-color: transparent;
-    border: 1px solid $white;
-    color: $white;
+    border: 1px solid $black;
+    color: $black;
+    &::before{
+      background: rgba($blue-d, 0.6);
+    }
+    &:hover{
+      &::before{
+        background: rgba($blue-d, 0.6);
+      }
+      background-color: $white;
+      color: $white;
+    }
   }
 }
 .btn__active{

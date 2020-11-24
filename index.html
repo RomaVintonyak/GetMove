@@ -21,6 +21,10 @@
     <title>&commat;GetMove developer studio</title>
 </head>
 <body>
+  <!--curswor castom-->
+  <div class="cursor__aura" id="cursorAura">
+    <div class="cursor__point" id="cursorPoint"></div>
+  </div>
   <!--preloader & absolute position elment section-->
   <div class="preloader">
     <div class="preolader__wraper">
@@ -40,7 +44,7 @@
       </a>
     </div><!--/.nav__brand-->
     <!--burger btn-->
-    <div class="burger__btn" id="burgerBtn">
+    <div class="burger__btn waves-effect waves-ripple" id="burgerBtn">
       <span class="burger__item"></span>
       <span class="burger__item"></span>
       <span class="burger__item"></span>
@@ -52,17 +56,17 @@
     <div class="container">
       <nav class="nav__menu">
         <ul class="primary__menu">
-          <li><a href="#" data-link="home" class="active__link">Что мы умеем</a></li>
-          <li><a href="#" data-link="about">Почему мы</a></li>
-          <li><a href="#" data-link="stage">Схема работы</a></li>
-          <li><a href="#" data-link="works">Портфолио</a></li>
-          <li><a href="#" data-link="faq">F.A.Q.</a></li>
-          <li><a href="#" data-link="contact">Обратная связь</a></li>
+          <li><a href="#" data-link="home" class="active__link waves-effect waves-button">Что мы умеем</a></li>
+          <li><a href="#" data-link="about" class="waves-effect waves-button">Почему мы</a></li>
+          <li><a href="#" data-link="stage" class="waves-effect waves-button">Схема работы</a></li>
+          <li><a href="#" data-link="works" class="waves-effect waves-button">Портфолио</a></li>
+          <li><a href="#" data-link="faq" class="waves-effect waves-button">F.A.Q.</a></li>
+          <li><a href="#" data-link="contact" class="waves-effect waves-button">Обратная связь</a></li>
         </ul><!--/.primary__menu-->
         <ul class="social__menu">
-          <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="#" target="_blank"><i class="fab fa-behance"></i></a></li>
-          <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#" target="_blank" class="waves-effect waves-button"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#" target="_blank" class="waves-effect waves-button"><i class="fab fa-behance"></i></a></li>
+          <li><a href="#" target="_blank" class="waves-effect waves-button"><i class="fab fa-instagram"></i></a></li>
         </ul><!--/.social__menu-->
       </nav><!--/.nav__menu-->
     </div><!--/.container-->
@@ -170,7 +174,7 @@
               интернете 
               начинается с нас
             </h1>
-            <button type="button" class="btn wow fadeInUp" data-wow-duration="2s" data-wow-delay="3.5s">
+            <button type="button" class="btn wow fadeInUp waves-effect waves-light" data-wow-duration="2s" data-wow-delay="3.5s">
               Заказать разработку
             </button>
           </div><!--/.collum__center-->
@@ -345,9 +349,9 @@
           <h2>Почему стоит выбрать нас</h2>
         </div><!--/.about__title-->
         <div class="about__btn">
-          <button type="button" class="btn btn--silver">Заполнить бриф</button>
+          <button type="button" class="btn btn--silver waves-effect waves-light">Заполнить бриф</button>
         </div><!--/.about__btn-->
-        <div class="about__collum about__collum--left text__center wow" data-wow-duration="2s" data-wow-iteration="1000" data-wow-delay="1s">
+        <div class="about__collum about__collum--left text__center wow" data-wow-duration="2s" data-wow-iteration="1000">
           <img src="/img/about__us/team.svg" alt="team" class="left__img">
           <h4>С нами надежно</h4>
           <p>
@@ -355,7 +359,7 @@
             исполнение которых возлагают на нас заказчики
           </p>
         </div><!--about__collum-->
-        <div class="about__collum about__collum--center text__center wow" data-wow-duration="2s" data-wow-iteration="1000" data-wow-delay="1s">
+        <div class="about__collum about__collum--center text__center wow" data-wow-duration="2s" data-wow-iteration="1000">
           <img src="img/about__us/breaf.svg" alt="breaf">
           <h4>
             Четкое<br/> 
@@ -367,7 +371,7 @@
             для лучшего понимания задачи
           </p>
         </div><!--about__collum-->
-        <div class="about__collum about__collum--right text__center wow" data-wow-duration="2s" data-wow-iteration="1000" data-wow-delay="1s">
+        <div class="about__collum about__collum--right text__center wow" data-wow-duration="2s" data-wow-iteration="1000">
           <img src="img/about__us/result.svg" alt="result">
           <h4>
             Работаем<br/> 
@@ -456,55 +460,130 @@
             <h3>Наши работы</h3>
             <h2>Портфолио</h2>
           </div><!--/.works__title-->
-          <div class="works__buttons text__center">
+          <!--works content-->
+          <div class="works__content">
+            <div class="works__galery works__galery--collum1">
+              <div class="galery__item">
+                <a href="img/works/brand1.jpg" data-lightbox="roadtrip" data-title="Brand design">
+                  <img src="img/works/brand1.jpg" alt="barand" class="img"> 
+                </a>
+                <div class="img__overlay">
+                  <a href="img/works/brand1.jpg" data-lightbox="roadtrip" data-title="Brand design" class="overlay__zoom"><i class="fas fa-search-plus"></i></a>
+                  <a href="" class="overlay__link"><i class="fas fa-link"></i></a>
+                </div>
+              </div><!--/.galery__item-->
+              <div class="galery__item">
+                <a href="img/works/brand2.jpg" data-lightbox="roadtrip" data-title="Brand design">
+                  <img src="img/works/brand2.jpg" alt="barand" class="img"> 
+                </a>
+                <div class="img__overlay">
+                  <a href="img/works/brand2.jpg" data-lightbox="roadtrip" data-title="Brand design" class="overlay__zoom"><i class="fas fa-search-plus"></i></a>
+                  <a href="" class="overlay__link"><i class="fas fa-link"></i></a>
+                </div>
+              </div><!--/.galery__item-->
+              <div class="galery__item">
+                <a href="img/works/brand3.jpg" data-lightbox="roadtrip" data-title="Brand design">
+                  <img src="img/works/brand3.jpg" alt="barand" class="img"> 
+                </a>
+                <div class="img__overlay">
+                  <a href="img/works/brand3.jpg" data-lightbox="roadtrip" data-title="Brand design" class="overlay__zoom"><i class="fas fa-search-plus"></i></a>
+                  <a href="" class="overlay__link"><i class="fas fa-link"></i></a>
+                </div>
+              </div><!--/.galery__item--> 
+            </div><!--/.works__galery-->
+            <div class="works__galery works__galery--collum1">
+              <div class="galery__item">
+                <a href="img/works/brand4.jpg" data-lightbox="roadtrip" data-title="Brand design">
+                  <img src="img/works/brand4.jpg" alt="barand" class="img"> 
+                </a>
+                <div class="img__overlay">
+                  <a href="img/works/brand4.jpg" data-lightbox="roadtrip" data-title="Brand design" class="overlay__zoom"><i class="fas fa-search-plus"></i></a>
+                  <a href="" class="overlay__link"><i class="fas fa-link"></i></a>
+                </div>
+              </div><!--/.galery__item-->
+              <div class="galery__item">
+                <a href="img/works/sites1.jpeg" data-lightbox="roadtrip" data-title="sites design">
+                  <img src="img/works/sites1.jpeg" alt="barand" class="img"> 
+                </a>
+                <div class="img__overlay">
+                  <a href="img/works/sites1.jpeg" data-lightbox="roadtrip" data-title="sites design" class="overlay__zoom"><i class="fas fa-search-plus"></i></a>
+                  <a href="" class="overlay__link"><i class="fas fa-link"></i></a>
+                </div>
+              </div><!--/.galery__item-->
+              <div class="galery__item">
+                <a href="img/works/sites2.jpeg" data-lightbox="roadtrip" data-title="sites design">
+                  <img src="img/works/sites2.jpeg" alt="barand" class="img"> 
+                </a>
+                <div class="img__overlay">
+                  <a href="img/works/sites2.jpeg" data-lightbox="roadtrip" data-title="sites design" class="overlay__zoom"><i class="fas fa-search-plus"></i></a>
+                  <a href="" class="overlay__link"><i class="fas fa-link"></i></a>
+                </div>
+              </div><!--/.galery__item--> 
+            </div><!--/.works__galery-->
+            <div class="works__galery works__galery--collum1">
+              <div class="galery__item">
+                <a href="img/works/sites3.jpeg" data-lightbox="roadtrip" data-title="sites design">
+                  <img src="img/works/sites3.jpeg" alt="barand" class="img"> 
+                </a>
+                <div class="img__overlay">
+                  <a href="img/works/sites3.jpeg" data-lightbox="roadtrip" data-title="sites design" class="overlay__zoom"><i class="fas fa-search-plus"></i></a>
+                  <a href="" class="overlay__link"><i class="fas fa-link"></i></a>
+                </div>
+              </div><!--/.galery__item-->
+              <div class="galery__item">
+                <a href="img/works/sites4.jpeg" data-lightbox="roadtrip" data-title="sites design">
+                  <img src="img/works/sites4.jpeg" alt="barand" class="img"> 
+                </a>
+                <div class="img__overlay">
+                  <a href="img/works/sites4.jpeg" data-lightbox="roadtrip" data-title="sites design" class="overlay__zoom"><i class="fas fa-search-plus"></i></a>
+                  <a href="" class="overlay__link"><i class="fas fa-link"></i></a>
+                </div>
+              </div><!--/.galery__item-->
+              <div class="galery__item">
+                <a href="img/works/mobile1.jpeg" data-lightbox="roadtrip" data-title="mobile design">
+                  <img src="img/works/mobile1.jpeg" alt="barand" class="img"> 
+                </a>
+                <div class="img__overlay">
+                  <a href="img/works/mobile1.jpeg" data-lightbox="roadtrip" data-title="mobile design" class="overlay__zoom"><i class="fas fa-search-plus"></i></a>
+                  <a href="" class="overlay__link"><i class="fas fa-link"></i></a>
+                </div>
+              </div><!--/.galery__item--> 
+            </div><!--/.works__galery-->
+            <div class="works__galery works__galery--collum1">
+              <div class="galery__item">
+                <a href="img/works/mobile2.jpeg" data-lightbox="roadtrip" data-title="mobile design">
+                  <img src="img/works/mobile2.jpeg" alt="barand" class="img"> 
+                </a>
+                <div class="img__overlay">
+                  <a href="img/works/mobile2.jpeg" data-lightbox="roadtrip" data-title="mobile design" class="overlay__zoom"><i class="fas fa-search-plus"></i></a>
+                  <a href="" class="overlay__link"><i class="fas fa-link"></i></a>
+                </div>
+              </div><!--/.galery__item-->
+              <div class="galery__item">
+                <a href="img/works/mobile3.jpeg" data-lightbox="roadtrip" data-title="mobile design">
+                  <img src="img/works/mobile3.jpeg" alt="barand" class="img"> 
+                </a>
+                <div class="img__overlay">
+                  <a href="img/works/mobile3.jpeg" data-lightbox="roadtrip" data-title="mobile design" class="overlay__zoom"><i class="fas fa-search-plus"></i></a>
+                  <a href="" class="overlay__link"><i class="fas fa-link"></i></a>
+                </div>
+              </div><!--/.galery__item-->
+              <div class="galery__item">
+                <a href="img/works/mobile4.jpeg" data-lightbox="roadtrip" data-title="mobile design">
+                  <img src="img/works/mobile4.jpeg" alt="barand" class="img"> 
+                </a>
+                <div class="img__overlay">
+                  <a href="img/works/mobile4.jpeg" data-lightbox="roadtrip" data-title="mobile design" class="overlay__zoom"><i class="fas fa-search-plus"></i></a>
+                  <a href="" class="overlay__link"><i class="fas fa-link"></i></a>
+                </div>
+              </div><!--/.galery__item--> 
+            </div><!--/.works__galery-->
+          </div><!--/.works__content-->
+          <!--<div class="works__buttons text__center">
             <button type="button" class="btn btn--outline" data-works="sites">Разработка сайтов</button>
             <button type="button" class="btn btn--outline btn__active" data-works="brand">Брендинг</button>
             <button type="button" class="btn btn--outline" data-works="mobile">Мобильные приложения</button>
-          </div><!--/.works__buttons-->
-          <div class="works__content">
-            <div class="sites__slider" id="sliderSites" data-cat="sites">
-                <div class="sites__slider--item">
-                  <img src="img/works/sites1.jpeg" alt="webSite" class="img">
-                </div>
-                <div class="sites__slider--item">
-                  <img src="img/works/sites2.jpeg" alt="webSite" class="img">
-                </div>
-                <div class="sites__slider--item">
-                  <img src="img/works/sites3.jpeg" alt="webSite" class="img">
-                </div>
-                <div class="sites__slider--item">
-                  <img src="img/works/sites4.jpeg" alt="webSite" class="img">
-                </div>
-            </div><!--/.sites__slider-->
-            <div class="brand__slider show__category" id="sliderBrand" data-cat="brand">
-              <div class="brand__slider--item">
-                <img src="img/works/brand1.jpg" alt="brand" class="img">
-              </div>
-              <div class="brand__slider--item">
-                <img src="img/works/brand2.jpg" alt="brand" class="img">
-              </div>
-              <div class="brand__slider--item">
-                <img src="img/works/brand3.jpg" alt="brand" class="img">
-              </div>
-              <div class="brand__slider--item">
-                <img src="img/works/brand4.jpg" alt="brand" class="img">
-              </div>
-          </div><!--/.brand__slider-->
-          <div class="mobile__slider" id="sliderMobile" data-cat="mobile">
-            <div class="mobile__slider--item">
-              <img src="img/works/mobile1.jpeg" alt="mobile" class="img">
-            </div>
-            <div class="mobile__slider--item">
-              <img src="img/works/mobile2.jpeg" alt="mobile" class="img">
-            </div>
-            <div class="mobile__slider--item">
-              <img src="img/works/mobile3.jpeg" alt="mobile" class="img">
-            </div>
-            <div class="mobile__slider--item">
-              <img src="img/works/mobile4.jpeg" alt="mobile" class="img">
-            </div>
-          </div><!--/.mobile__slider-->
-          </div><!--/.works__content-->
+          </div></.works__buttons-->
         </div><!--/.works__row-->
       </div><!--/.container-->
     </section><!--/.works-->
@@ -515,6 +594,7 @@
           <div class="faq__title text__center">
             <h3>F.A.Q.</h3>
             <h2>Популярные вопросы</h2>
+            <hr class="faq__line">
           </div><!--/.faq__title-->
           <div class="faq__content">
             <div class="faq__block faq__block--1 text__center">
@@ -587,9 +667,9 @@
             <span>Номера телефонов viber, telegram</span>
             <h3>Мы в соцсетях</h3>
             <ul class="social__menu social__menu--footer">
-              <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-              <li><a href="#" target="_blank"><i class="fab fa-behance"></i></a></li>
-              <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#" target="_blank" class="waves-effect waves-button"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#" target="_blank" class="waves-effect waves-button"><i class="fab fa-behance"></i></a></li>
+              <li><a href="#" target="_blank" class="waves-effect waves-button"><i class="fab fa-instagram"></i></a></li>
             </ul><!--/.social__menu-->
           </div><!--/.contact__data-->
           <div class="contact__form text__left">
@@ -606,12 +686,12 @@
               <input type="tel" id="phone" placeholder="Оставьте ваш номер телефона" autocomplete="off">
               <label for="mesages">Сообщение</label>
               <textarea name="mesages" id="mesages" placeholder="Ваше сообщене"></textarea>
-              <button type="button" class="btn btn--send" id="sendForm">Отправить</button>
+              <button type="button" class="btn btn--send waves-effect waves-light" id="sendForm">Отправить</button>
               <div class="error__text" id="errorText"></div>
             </form>
           </div><!--/.contact__form-->
         </div><!--/.contact__row-->
-        <footer id="footer" class="footer">
+        <footer id="footer" class="footer text__center">
           Copyright &copy; <script>"use script"; document.write(new Date().getFullYear());</script> 
           <strong>GetMove</strong> All Right Reserved
         </footer><!--/.footer-->
@@ -625,10 +705,12 @@
   <script src="/js/vendor/particles.min.js"></script>
   <!--particle js setings-->
   <script src="js/app.min.js"></script>
-  <!--use slick slider script https://kenwheeler.github.io/slick/ -->
-  <script src="js/vendor/slick.min.js"></script>
+  <!--use lightbox galery script https://lokeshdhakar.com/projects/lightbox2/ -->
+  <script src="js/vendor/lightbox.min.js"></script>
   <!--use wow animation https://wowjs.uk/docs.html -->
   <script src="js/vendor/wow.min.js"></script>
+  <!--use waves efect https://www.um.es/docencia/barzana/materializecss/waves.html -->
+  <script src="js/vendor/waves.min.js"></script>
   <!--main script conected-->
   <script src="js/main.min.js"></script>
 </body>

@@ -1,0 +1,48 @@
+/*variables*/
+@import "./var.scss";
+/*helpers class*/
+@import "./help.scss";
+/*mixins*/
+@import "./mixin.scss";
+
+.cursor__aura{
+  position: absolute;
+  border-radius: 100%;
+  transition: 0.5s cubic-bezier(.75, -1.27, .3, 2.33) transform, 
+              0.2s cubic-bezier(.75, -1.27, .3, 2.33) opacity,
+              0.5s cubic-bezier(.75, -1.27, .3, 2.33) background-color;
+  user-select: none;
+  pointer-events: none;
+  z-index: 15000;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba($color: $white, $alpha: 0.35);
+  background-color: rgba($color: $white, $alpha: 0.5);
+  &--hiden{
+    transform: scale(0.25);
+  }
+  &--active{
+    transform: scale(1.3);
+    opacity: 0.7;
+    border: 1px solid rgba($color: $black, $alpha: 0.3);
+    background-color: rgba($color: $black, $alpha: 0.4);
+  }
+}
+.cursor__point{
+  width: 8px;
+  height: 8px;
+  background-color: rgba($color: $white, $alpha: 0.5);
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s cubic-bezier(.75, -1.27, .3, 2.33) opacity,
+              0.5s cubic-bezier(.75, -1.27, .3, 2.33) visibility;
+  &--active{
+    opacity: 0;
+    visibility: hidden;
+  }
+}

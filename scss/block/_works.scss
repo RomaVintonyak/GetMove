@@ -20,17 +20,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   height: 100vh;
 }
 .works__title{
-  margin-bottom: 2.3rem;
+  margin-top: 2rem;
   h3{
     font-family: $popins;
     font-style: normal;
     font-weight: 600;
-    font-size: 0.87rem;
+    font-size: 1rem;
     line-height: 21px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -41,13 +41,76 @@
     font-family: $popins;
     font-style: normal;
     font-weight: 600;
-    font-size: 2.18rem;
+    font-size: 2.5rem;
     line-height: 50px;
     color: $white;
   }
 }
-.works__buttons{
-  margin-bottom: 2.3rem;
+.works__content{
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+.works__galery{
+  width: 24%;
+  height: 100%;
+}
+.galery__item{
+  position: relative;
+  z-index: 2;
+  margin: 0.5rem 0;
+  &:hover{
+    .img__overlay{
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+.img__overlay{
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.4s linear, opacity 0.4s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: rgba($color: $black, $alpha: 0.5);
+  a{
+    display: block;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    border: 1px solid $white;
+    text-align: center;
+    line-height: 55px;
+    margin-right: 1rem;
+    transition: background-color 0.3s linear;
+    &:last-child{
+      margin-right: 0;
+    }
+    i{
+      font-size: 1.5rem;
+      color: $white;
+      transition: background-color 0.3s linear;
+    }
+    &:hover{
+      background-color: rgba($color: $white, $alpha: 0.7);
+      i{
+        color: $black;
+      }
+    }
+  }
+}
+/*.works__buttons{
+  margin-bottom: -8rem;
   width: 100%;
   button{
     margin-right: 1.12rem;
@@ -55,59 +118,4 @@
       margin-right: 0;
     }
   }
-}
-.works__content{
-  width: 100%;
-  height: 50vh;
-  position: relative;
-}
-.sites__slider{
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0.5s linear, opacity 0.5s linear;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: flex-start;
-  &--item{
-    margin: 0 0.5rem;
-  }
-}
-.brand__slider{
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0.5s linear, opacity 0.5s linear;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: flex-start;
-  &--item{
-    margin: 0 0.5rem;
-  }
-}
-.mobile__slider{
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0.5s linear, opacity 0.5s linear;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: flex-start;
-  &--item{
-    margin: 0 0.5rem;
-  }
-}
-.show__category{
-  visibility: visible;
-  opacity: 1;
-  transition: visibility 0.5s linear, opacity 0.5s linear;
-}
+}*/

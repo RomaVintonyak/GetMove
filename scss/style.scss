@@ -1,12 +1,15 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+@import "./vendor/normalize.scss";
 /*variables*/
 @import "./var.scss";
 /*helpers class*/
 @import "./help.scss";
 /*mixins*/
 @import "./mixin.scss";
-/*vendor*/
 
 /*block*/
+/*cursor*/
+@import "block/cursor.scss"; 
 /*preloader*/
 @import "block/preloader.scss"; 
 /*container*/
@@ -33,13 +36,21 @@
 @import "block/contact.scss"; 
 /*burger style*/
 @import "block/burger.scss"; 
+/*footer style*/
+@import "block/footer.scss"; 
 
 /*vendor style*/
-/*slick slider*/
-@import "vendor/slick.scss";
+
+/*lightbox galery*/
+@import "vendor/lightbox.scss";
 /*animation style*/
 @import "vendor/animate.scss";
+/*waves style*/
+@import "vendor/waves.scss";
 /*main style*/
+*{
+  cursor: none!important;
+}
 html{
   font-size: 16px;
 }
